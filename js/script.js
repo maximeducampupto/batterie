@@ -1,5 +1,6 @@
 function playAnimation(element)
 {
+    console.log(element);
     element.addClass('playing');
     setTimeout(function() {
         element.removeClass('playing');
@@ -9,11 +10,12 @@ function playAnimation(element)
 function playSound(num)
 {
     let div = $('div[data-key="' + num + '"]');
+    let audio = $('audio[data-key="' + num + '"]');
 
-    if (div)
+
+    if (div.length !== 0 && audio.length !== 0)
     {
         playAnimation(div);
-        let audio = $('audio[data-key="' + num + '"]');
         audio[0].play();
     }
 }
