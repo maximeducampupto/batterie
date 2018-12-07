@@ -1,6 +1,5 @@
 function playAnimation(element)
 {
-    console.log(element);
     element.addClass('playing');
     setTimeout(function() {
         element.removeClass('playing');
